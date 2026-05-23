@@ -5,6 +5,20 @@ import { ExternalLink, Code } from 'lucide-react';
 const Projects = () => {
   const projects = [
     {
+      title: "Smart Incident Tracker",
+      description: "A real-time Incident Management Platform designed with an immersive cyberpunk Infinitum aesthetic. Features interactive service dependency maps, SLA tracking, automated escalation workflows, and live notifications to optimize MTTR.",
+      tech: ["MongoDB", "Express.js", "React", "Node.js", "Socket.io", "React Flow"],
+      featured: true,
+      github: "https://github.com/MahaManisha/smart-incident-tracker"
+    },
+    {
+      title: "Gamified Habit Tracker",
+      description: "A mobile application built to help users establish and track daily habits using gamification features like streaks, rewards, and interactive progress tracking. Integrated secure Firebase authentication and cloud-synced storage.",
+      tech: ["Flutter", "Dart", "Firebase", "Firestore", "Authentication"],
+      featured: true,
+      github: "https://github.com/MahaManisha/gamified-habit-tracker"
+    },
+    {
       title: "Personal Finance Manager",
       description: "A comprehensive backend-driven finance tracking system. Designed RESTful APIs and implemented secure authentication and category-based tracking to generate actionable financial summaries.",
       tech: ["Spring Boot", "MySQL", "REST APIs", "Postman"],

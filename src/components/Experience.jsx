@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Award, BookOpen, Shield, Cloud, Database, CheckCircle } from 'lucide-react';
+import { Award, BookOpen, Shield, Cloud, Database, CheckCircle, ExternalLink } from 'lucide-react';
 
 const Experience = () => {
   const education = [
@@ -20,26 +20,78 @@ const Experience = () => {
 
   const certificationGroups = [
     {
+      category: "Honors & Achievements",
+      icon: <Award size={20} className="text-yellow-400" />,
+      items: [
+        { 
+          name: "NPTEL Discipline Star", 
+          issuer: "NPTEL", 
+          year: "2025", 
+          featured: true,
+          link: "https://drive.google.com/file/d/1your-discipline-star-id/view?usp=sharing"
+        },
+        { 
+          name: "Technical English for Engineers", 
+          issuer: "NPTEL", 
+          year: "2024", 
+          featured: false,
+          link: "https://drive.google.com/file/d/1your-technical-english-id/view?usp=sharing"
+        }
+      ]
+    },
+    {
       category: "Security & Cryptography",
       icon: <Shield size={20} className="text-primary" />,
       items: [
         { name: "Cryptography", issuer: "Infosys", year: "2025", featured: true },
-        { name: "Privacy & Security in Online Social Media", issuer: "NPTEL", year: "2025", featured: false }
+        { 
+          name: "Privacy & Security in Online Social Media", 
+          issuer: "NPTEL", 
+          year: "2025", 
+          featured: false,
+          link: "https://drive.google.com/file/d/1your-privacy-security-id/view?usp=sharing"
+        }
       ]
     },
     {
       category: "Cloud & IoT",
       icon: <Cloud size={20} className="text-secondary" />,
       items: [
-        { name: "Cloud Computing", issuer: "NPTEL", year: "2024", featured: false },
-        { name: "IoT & IIoT 4.0", issuer: "NPTEL", year: "2024", featured: false }
+        { 
+          name: "Cloud Computing", 
+          issuer: "NPTEL", 
+          year: "2024", 
+          featured: false,
+          link: "https://drive.google.com/file/d/1your-cloud-computing-id/view?usp=sharing"
+        },
+        { 
+          name: "Introduction to IoT", 
+          issuer: "NPTEL", 
+          year: "2024", 
+          featured: false,
+          link: "https://drive.google.com/file/d/1your-iot-id/view?usp=sharing"
+        },
+        { 
+          name: "Industrial IoT", 
+          issuer: "NPTEL", 
+          year: "2024", 
+          featured: false,
+          link: "https://drive.google.com/file/d/1your-iiot-id/view?usp=sharing"
+        }
       ]
     },
     {
-      category: "Databases & Networking",
+      category: "Databases & Programming",
       icon: <Database size={20} className="text-blue-400" />,
       items: [
         { name: "MongoDB Certification", issuer: "MongoDB", year: "2024", featured: true },
+        { 
+          name: "The Joy of Computing using Python", 
+          issuer: "NPTEL", 
+          year: "2023", 
+          featured: false,
+          link: "https://drive.google.com/file/d/1your-joy-of-computing-id/view?usp=sharing"
+        },
         { name: "Troubleshooting", issuer: "Cisco Networking Academy", year: "2024", featured: false }
       ]
     }
@@ -136,7 +188,22 @@ const Experience = () => {
                     >
                       <div className="flex flex-col mb-2 sm:mb-0">
                         <span className="font-semibold text-white/95 text-lg">{cert.name}</span>
-                        <span className="text-sm text-muted">{cert.issuer}</span>
+                        <div className="flex items-center gap-2">
+                          <span className="text-sm text-muted">{cert.issuer}</span>
+                          {cert.link && (
+                            <>
+                              <span className="text-muted/40 text-xs">•</span>
+                              <a 
+                                href={cert.link} 
+                                target="_blank" 
+                                rel="noreferrer" 
+                                className="inline-flex items-center gap-1 text-xs text-primary hover:text-white transition-colors hover:underline group/link"
+                              >
+                                View Certificate <ExternalLink size={12} className="inline group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
+                              </a>
+                            </>
+                          )}
+                        </div>
                       </div>
                       <span className="inline-flex self-start sm:self-auto text-xs font-mono px-2.5 py-1 bg-surface rounded-md text-muted border border-white/10">
                         {cert.year}
