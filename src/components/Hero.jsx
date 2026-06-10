@@ -2,6 +2,18 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Download, Code, Network } from 'lucide-react';
 
+const FiverrIcon = ({ size = 22, className = "" }) => (
+  <svg 
+    viewBox="0 0 24 24" 
+    fill="currentColor" 
+    width={size} 
+    height={size} 
+    className={className}
+  >
+    <path d="M19.062 10.428h-3.52v-1.87c0-.781.587-.936 1.055-.936h2.41V4.5h-3.21c-2.84 0-3.951 1.791-3.951 3.738v2.19H10.03v3.15h1.816v10.422h4.18V13.578h3.513l.477-3.15zM21 4.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+  </svg>
+);
+
 const Hero = () => {
   return (
     <section className="min-h-screen flex items-center justify-center pt-20 px-6 lg:px-12">
@@ -38,6 +50,9 @@ const Hero = () => {
             <a href="#projects" className="px-6 py-3 rounded-full bg-primary text-white font-medium flex items-center gap-2 hover:bg-primary/90 transition-colors shadow-lg shadow-primary/25">
               View Projects <ArrowRight size={18} />
             </a>
+            <a href="https://www.fiverr.com/s/P2KwBXA" target="_blank" rel="noreferrer" className="px-6 py-3 rounded-full bg-emerald-600 text-white font-medium flex items-center gap-2 hover:bg-emerald-500 transition-colors shadow-lg shadow-emerald-600/25">
+              <FiverrIcon size={18} /> Freelance on Fiverr
+            </a>
             <a href="/resume.pdf" download className="px-6 py-3 rounded-full bg-surface border border-white/10 text-white font-medium flex items-center gap-2 hover:bg-white/5 transition-colors">
               <Download size={18} /> Resume
             </a>
@@ -46,10 +61,13 @@ const Hero = () => {
           <div className="flex items-center gap-6 mt-12">
             <p className="text-sm font-medium text-muted uppercase tracking-widest">Connect</p>
             <div className="h-px w-12 bg-white/10"></div>
-            <a href="https://github.com/MahaManisha" target="_blank" rel="noreferrer" className="text-muted hover:text-white transition-colors">
+            <a href="https://github.com/MahaManisha" target="_blank" rel="noreferrer" className="text-muted hover:text-white transition-colors" title="GitHub">
               <Code size={22} />
             </a>
-            <a href="#" target="_blank" rel="noreferrer" className="text-muted hover:text-secondary transition-colors">
+            <a href="https://www.fiverr.com/s/P2KwBXA" target="_blank" rel="noreferrer" className="text-muted hover:text-emerald-400 transition-colors" title="Fiverr">
+              <FiverrIcon size={22} />
+            </a>
+            <a href="#" target="_blank" rel="noreferrer" className="text-muted hover:text-secondary transition-colors" title="Network">
               <Network size={22} />
             </a>
           </div>

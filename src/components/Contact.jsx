@@ -2,6 +2,18 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 
+const FiverrIcon = ({ size = 24, className = "" }) => (
+  <svg 
+    viewBox="0 0 24 24" 
+    fill="currentColor" 
+    width={size} 
+    height={size} 
+    className={className}
+  >
+    <path d="M19.062 10.428h-3.52v-1.87c0-.781.587-.936 1.055-.936h2.41V4.5h-3.21c-2.84 0-3.951 1.791-3.951 3.738v2.19H10.03v3.15h1.816v10.422h4.18V13.578h3.513l.477-3.15zM21 4.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+  </svg>
+);
+
 const Contact = () => {
   return (
     <section id="contact" className="py-24 px-6 lg:px-12 relative z-10">
@@ -52,6 +64,16 @@ const Contact = () => {
               <div>
                 <p className="text-sm text-muted mb-1 uppercase tracking-wider">Location</p>
                 <p className="text-lg font-medium">Tamil Nadu, India</p>
+              </div>
+            </div>
+
+            <div className="glass-card p-6 rounded-2xl flex items-center gap-6">
+              <div className="w-14 h-14 rounded-full bg-emerald-500/10 flex items-center justify-center text-emerald-400 border border-emerald-500/20 shrink-0">
+                <FiverrIcon size={24} />
+              </div>
+              <div>
+                <p className="text-sm text-muted mb-1 uppercase tracking-wider">Freelance</p>
+                <a href="https://www.fiverr.com/s/P2KwBXA" target="_blank" rel="noreferrer" className="text-lg font-medium hover:text-emerald-400 transition-colors">Hire me on Fiverr</a>
               </div>
             </div>
           </motion.div>

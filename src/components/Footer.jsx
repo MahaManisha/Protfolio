@@ -1,6 +1,18 @@
 import React from 'react';
 import { Code, Network, ArrowUp } from 'lucide-react';
 
+const FiverrIcon = ({ size = 20, className = "" }) => (
+  <svg 
+    viewBox="0 0 24 24" 
+    fill="currentColor" 
+    width={size} 
+    height={size} 
+    className={className}
+  >
+    <path d="M19.062 10.428h-3.52v-1.87c0-.781.587-.936 1.055-.936h2.41V4.5h-3.21c-2.84 0-3.951 1.791-3.951 3.738v2.19H10.03v3.15h1.816v10.422h4.18V13.578h3.513l.477-3.15zM21 4.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+  </svg>
+);
+
 const Footer = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -26,10 +38,13 @@ const Footer = () => {
         </button>
 
         <div className="flex items-center gap-4">
-          <a href="https://github.com/MahaManisha" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-white/5 hover:bg-primary/20 flex items-center justify-center text-muted hover:text-primary transition-colors border border-white/10">
+          <a href="https://github.com/MahaManisha" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-white/5 hover:bg-primary/20 flex items-center justify-center text-muted hover:text-primary transition-colors border border-white/10" title="GitHub">
             <Code size={20} />
           </a>
-          <a href="#" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-white/5 hover:bg-secondary/20 flex items-center justify-center text-muted hover:text-secondary transition-colors border border-white/10">
+          <a href="https://www.fiverr.com/s/P2KwBXA" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-white/5 hover:bg-emerald-500/20 flex items-center justify-center text-muted hover:text-emerald-400 transition-colors border border-white/10" title="Fiverr">
+            <FiverrIcon size={20} />
+          </a>
+          <a href="#" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-white/5 hover:bg-secondary/20 flex items-center justify-center text-muted hover:text-secondary transition-colors border border-white/10" title="Network">
             <Network size={20} />
           </a>
         </div>
